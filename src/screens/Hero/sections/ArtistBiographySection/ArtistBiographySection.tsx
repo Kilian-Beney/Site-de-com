@@ -1,15 +1,15 @@
 export const ArtistBiographySection = (): JSX.Element => {
   return (
-    <section className="relative w-full overflow-hidden py-6">
-      <div className="flex flex-row items-start gap-8 px-[114px]">
+    <section className="relative w-full overflow-hidden py-6 md:py-12">
+      <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 px-4 md:px-12 lg:px-[114px] relative z-10">
         <img
-          className="w-[397px] h-[498px] object-cover flex-shrink-0"
+          className="w-full md:w-[300px] lg:w-[397px] h-auto md:h-[375px] lg:h-[498px] object-cover flex-shrink-0"
           alt="Jd"
           src="/jd-1.png"
         />
 
-        <div className="flex flex-col items-start gap-[33px] flex-1 pt-0">
-          <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-[32px] tracking-[-0.72px] leading-[31px]">
+        <div className="flex flex-col items-start gap-6 md:gap-[33px] flex-1 pt-0">
+          <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[32px] tracking-[-0.72px] leading-relaxed md:leading-[31px]">
             <span className="tracking-[-0.72px]">&nbsp;&nbsp; </span>
             <span className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold tracking-[-0.72px]">
               Jean Dupas
@@ -26,7 +26,7 @@ export const ArtistBiographySection = (): JSX.Element => {
             <span className="tracking-[-0.72px]">.</span>
           </p>
 
-          <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-[32px] tracking-[-0.72px] leading-[31px]">
+          <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[32px] tracking-[-0.72px] leading-relaxed md:leading-[31px]">
             <span className="tracking-[-0.72px]">
               &nbsp;&nbsp; Né à Bordeaux, il s&apos;est illustré par un style
               élégant et monumental, mêlant classicisme et modernité. Il est
@@ -44,9 +44,10 @@ export const ArtistBiographySection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center overflow-hidden pointer-events-none">
-        <div className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[#59c0eb] text-[283.6px] tracking-[-25.52px] leading-[233.9px] whitespace-nowrap">
-          JEAN DUPAS
+      <div className="absolute bottom-0 left-0 right-0 flex justify-start overflow-hidden pointer-events-none">
+        <div className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[100px] md:text-[200px] lg:text-[283.6px] tracking-[-10px] md:tracking-[-20px] lg:tracking-[-25.52px] leading-[80px] md:leading-[160px] lg:leading-[233.9px] whitespace-nowrap">
+          <span className="text-black">JEAN</span>{" "}
+          <span className="text-[#59c0eb]">DUPAS</span>
         </div>
       </div>
     </section>

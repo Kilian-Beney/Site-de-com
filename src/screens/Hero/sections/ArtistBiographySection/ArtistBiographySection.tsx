@@ -44,10 +44,9 @@ export const ArtistBiographySection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 flex justify-start overflow-hidden pointer-events-none">
-        <div className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[100px] md:text-[200px] lg:text-[283.6px] tracking-[-10px] md:tracking-[-20px] lg:tracking-[-25.52px] leading-[80px] md:leading-[160px] lg:leading-[233.9px] whitespace-nowrap">
-          <span className="text-black">JEAN</span>{" "}
-          <span className="text-[#59c0eb]">DUPAS</span>
+      <div className="absolute -bottom-[9%] left-0 right-0 flex justify-start overflow-hidden pointer-events-none z-20">
+        <div className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[100px] md:text-[200px] lg:text-[333.6px] tracking-[-10px] md:tracking-[-20px] lg:tracking-[-25.52px] leading-[80px] md:leading-[160px] lg:leading-[283.9px] whitespace-nowrap">
+          <span className="text-[#59c0eb]">JEAN DUPAS</span>
         </div>
       </div>
     </section>

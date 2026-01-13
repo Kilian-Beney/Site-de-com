@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 const navigationTabs = [
   {
     id: "musba-mmi",
@@ -17,8 +15,15 @@ const navigationTabs = [
   },
 ];
 
-export const NavigationTabsSection = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState("musba-mmi");
+interface NavigationTabsSectionProps {
+  activeTab: string;
+  setActiveTab: (tabId: string) => void;
+}
+
+export const NavigationTabsSection = ({
+  activeTab,
+  setActiveTab,
+}: NavigationTabsSectionProps): JSX.Element => {
 
   return (
     <nav className="flex w-full max-w-full md:max-w-[661px] mx-auto items-center relative rounded-[62px] border-[0.4px] border-solid border-black px-2 md:px-0 my-4">

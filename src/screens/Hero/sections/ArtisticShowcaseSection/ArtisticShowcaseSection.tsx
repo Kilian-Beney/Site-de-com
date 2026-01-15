@@ -8,8 +8,8 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
-      <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-white mb-12">
+    <section className="relative w-full pt-12 md:pt-16 px-4 md:px-12 lg:px-[114px] bg-white">
+      <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-white">
         <div className="absolute inset-0 flex items-center justify-center">
           {artworks.map((artwork) => (
             <div

@@ -36,8 +36,8 @@ export const Hero = (): JSX.Element => {
     <div className="bg-white w-full flex flex-col">
       <LogoSection />
 
-      <ArtistBiographySection />
       <ArtisticShowcaseSection />
+      <ArtistBiographySection />
       <VideoSection />
       <TeamsSection />
       <CollaborationSection />

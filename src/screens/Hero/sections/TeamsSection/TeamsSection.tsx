@@ -39,10 +39,14 @@ export const TeamsSection = (): JSX.Element => {
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
-      <h2 className="title-bar [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-8 md:mb-12">
-        Nos équipes
+      <h2 className="title-bar [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-12 md:mb-16">
+        Métiers du Multimédia et de l'Internet
       </h2>
-
+      <div className="max-w-[900px] flex flex-col gap-6 mb-12 md:mb-16">
+        <p className="reveal slide-left [font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
+          Le département MMI de l'IUT Bordeaux Montaigne forme des professionnels polyvalents dans les domaines du numérique, de la communication et du design. Ce projet d'exposition collaborative illustre notre approche pédagogique basée sur la réalisation de projets concrets et la collaboration interdisciplinaire.
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {teams.map((team, index) => (
           <div

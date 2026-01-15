@@ -1,7 +1,7 @@
 export const CollaborationSection = (): JSX.Element => {
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
-      <h2 className="title-bar [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-8 md:mb-10">
+      <h2 className="title-bar [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-12 md:mb-16">
         Collaboration avec le MusBA
       </h2>
 

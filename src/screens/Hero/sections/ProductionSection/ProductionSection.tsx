@@ -3,11 +3,11 @@ export const ProductionSection = (): JSX.Element => {
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
-      <h2 className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-6">
+      <h2 className="title-bar [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-6">
         Réalisation
       </h2>
 
-      <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mb-10 max-w-[900px]">
+      <p className="reveal slide-left [font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mb-10 max-w-[900px]">
         Découvrez le processus de création et les différentes étapes du développement de l'expérience interactive tablette.
       </p>
 

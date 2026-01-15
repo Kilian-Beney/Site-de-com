@@ -26,18 +26,6 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
           </h1>
         </div>
       </div>
-
-      <div className="max-w-[900px] mx-auto">
-        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
-          Jean Dupas (1882-1964) est peintre, dessinateur, affichiste et décorateur français. Il s'impose comme l'un des artistes les plus emblématiques de l'Art Déco.
-        </p>
-        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mt-4">
-          Né à Bordeaux, il s'est illustré par un style élégant et monumental, mêlant classicisme et modernité.
-        </p>
-        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mt-4">
-          Il est notamment connu pour ses grandes compositions décoratives, comme celles réalisées pour le paquebot Normandie, qui ont contribué à faire de lui une figure majeure des arts décoratifs du XXᵉ siècle.
-        </p>
-      </div>
     </section>
   );
 };

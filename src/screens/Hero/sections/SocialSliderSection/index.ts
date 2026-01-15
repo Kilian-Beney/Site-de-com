@@ -1,0 +1,1 @@
+export { SocialSliderSection } from "./SocialSliderSection";

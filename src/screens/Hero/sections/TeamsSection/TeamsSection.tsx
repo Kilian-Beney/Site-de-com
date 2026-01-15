@@ -1,30 +1,41 @@
+import { useState } from "react";
+
 export const TeamsSection = (): JSX.Element => {
+  const [flipped, setFlipped] = useState<{ [key: number]: boolean }>({});
+
   const teams = [
     {
       title: "UX/UI\nDesign",
-      description: "",
+      description: "Conception de l'interface interactive et expérience utilisateur optimisée pour le contexte muséal.",
     },
     {
       title: "Direction\nArtistique & 3D",
-      description: "",
+      description: "Direction visuelle, création 3D et mise en valeur esthétique de l'univers artistique de Jean Dupas.",
     },
     {
-      title: "Développeme\nnt",
-      description: "",
+      title: "Développement",
+      description: "Architecture technique et développement de la plateforme interactive et de ses fonctionnalités.",
     },
     {
       title: "Stratégie &\nCommunication",
-      description: "",
+      description: "Stratégie de médiation, communication institutionnelle et accompagnement du projet.",
     },
     {
-      title: "Rédact\nion",
-      description: "",
+      title: "Rédaction",
+      description: "Rédaction des contenus éditoriaux, textes biographiques et information du projet.",
     },
     {
       title: "Gestion de\nProjet",
-      description: "",
+      description: "Coordination générale, planification et suivi du projet en collaboration avec le MusBA.",
     },
   ];
+
+  const toggleFlip = (index: number) => {
+    setFlipped((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
@@ -36,14 +47,46 @@ export const TeamsSection = (): JSX.Element => {
         {teams.map((team, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center border border-black rounded-none p-8 md:p-10 aspect-[3/4] bg-white hover:bg-gray-50 transition-colors"
+            className="h-80 cursor-pointer perspective"
+            onClick={() => toggleFlip(index)}
           >
-            <h3 className="[font-family:'Helvetica_Neue-Medium',Helvetica] font-medium text-black text-xl md:text-2xl lg:text-[28px] tracking-[-0.5px] leading-tight text-center whitespace-pre-line">
-              {team.title}
-            </h3>
+            <div
+              className={`relative w-full h-full transition-transform duration-500 transform-gpu ${
+                flipped[index] ? "[transform:rotateY(180deg)]" : ""
+              }`}
+              style={{
+                transformStyle: "preserve-3d",
+                transform: flipped[index] ? "rotateY(180deg)" : "rotateY(0deg)",
+              }}
+            >
+              <div
+                className="absolute w-full h-full flex flex-col items-center justify-center border border-black p-8 md:p-10 bg-white"
+                style={{ backfaceVisibility: "hidden" }}
+              >
+                <h3 className="[font-family:'Helvetica_Neue-Medium',Helvetica] font-medium text-black text-xl md:text-2xl lg:text-[28px] tracking-[-0.5px] leading-tight text-center whitespace-pre-line">
+                  {team.title}
+                </h3>
+              </div>
+
+              <div
+                className="absolute w-full h-full flex flex-col items-center justify-center border border-black p-6 md:p-8 bg-white"
+                style={{
+                  backfaceVisibility: "hidden",
+                  transform: "rotateY(180deg)",
+                }}
+              >
+                <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-sm md:text-base lg:text-[16px] tracking-[-0.4px] leading-relaxed text-center">
+                  {team.description}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
+
+      <p className="text-center text-gray-500 text-sm mt-8 [font-family:'Helvetica_Neue-Regular',Helvetica]">
+        Cliquez sur les cartes pour découvrir ce que chaque équipe a apporté au projet
+      </p>
     </section>
   );
 };

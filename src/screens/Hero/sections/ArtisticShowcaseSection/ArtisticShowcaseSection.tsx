@@ -8,21 +8,35 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-white">
-      <div className="absolute inset-0 flex items-center justify-center">
-        {artworks.map((artwork) => (
-          <div
-            key={artwork.id}
-            className={`absolute ${artwork.position} ${artwork.width} ${artwork.height} ${artwork.zIndex || 'z-10'} bg-[#E5E5E5] border border-gray-300 shadow-lg`}
-          >
-          </div>
-        ))}
+    <section className="relative w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
+      <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-white mb-12">
+        <div className="absolute inset-0 flex items-center justify-center">
+          {artworks.map((artwork) => (
+            <div
+              key={artwork.id}
+              className={`absolute ${artwork.position} ${artwork.width} ${artwork.height} ${artwork.zIndex || 'z-10'} bg-[#E5E5E5] border border-gray-300 shadow-lg`}
+            >
+            </div>
+          ))}
+        </div>
+
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
+          <h1 className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-[80px] md:text-[150px] lg:text-[200px] tracking-[-8px] md:tracking-[-15px] lg:tracking-[-20px] leading-none text-center">
+            Jean Dupas
+          </h1>
+        </div>
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-        <h1 className="[font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-black text-[80px] md:text-[150px] lg:text-[200px] tracking-[-8px] md:tracking-[-15px] lg:tracking-[-20px] leading-none text-center">
-          Jean Dupas
-        </h1>
+      <div className="max-w-[900px] mx-auto">
+        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
+          Jean Dupas (1882-1964) est peintre, dessinateur, affichiste et décorateur français. Il s'impose comme l'un des artistes les plus emblématiques de l'Art Déco.
+        </p>
+        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mt-4">
+          Né à Bordeaux, il s'est illustré par un style élégant et monumental, mêlant classicisme et modernité.
+        </p>
+        <p className="[font-family:'Helvetica_Neue-Regular',Helvetica] font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px] mt-4">
+          Il est notamment connu pour ses grandes compositions décoratives, comme celles réalisées pour le paquebot Normandie, qui ont contribué à faire de lui une figure majeure des arts décoratifs du XXᵉ siècle.
+        </p>
       </div>
     </section>
   );

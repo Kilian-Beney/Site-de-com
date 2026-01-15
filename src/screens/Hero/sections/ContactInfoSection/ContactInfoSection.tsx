@@ -11,7 +11,7 @@ export const ContactInfoSection = (): JSX.Element => {
   ];
 
   return (
-    <footer className="w-full bg-[#59c0eb] py-8 md:py-12">
+    <footer className="w-full bg-[#85A798] py-8 md:py-12">
       <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 px-4 md:px-12 lg:px-[105px] max-w-full mx-auto">
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-start [font-family:'Helvetica_Neue-Medium',Helvetica] font-medium text-[#ffff85] text-5xl md:text-7xl lg:text-[100px] tracking-[-4px] md:tracking-[-7px] lg:tracking-[-9.00px] leading-tight">

@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { ArtistBiographySection } from "./sections/ArtistBiographySection";
+import { ArtisticShowcaseSection } from "./sections/ArtisticShowcaseSection";
+import { CollaborationSection } from "./sections/CollaborationSection";
 import { ContactInfoSection } from "./sections/ContactInfoSection";
 import { LogoSection } from "./sections/LogoSection";
 import { NavigationTabsSection } from "./sections/NavigationTabsSection";
+import { ProductionSection } from "./sections/ProductionSection";
 import { ProjectDescriptionSection } from "./sections/ProjectDescriptionSection";
 import { ProjectIntroSection } from "./sections/ProjectIntroSection";
+import { TeamsSection } from "./sections/TeamsSection";
 import { LogbookSection } from "./sections/LogbookSection";
 
 export const Hero = (): JSX.Element => {
@@ -20,6 +24,10 @@ export const Hero = (): JSX.Element => {
         <>
           <ProjectIntroSection />
           <ProjectDescriptionSection />
+          <ArtisticShowcaseSection />
+          <TeamsSection />
+          <CollaborationSection />
+          <ProductionSection />
         </>
       )}
 

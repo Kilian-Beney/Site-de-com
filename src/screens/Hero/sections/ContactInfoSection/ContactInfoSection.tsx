@@ -30,7 +30,7 @@ export const ContactInfoSection = (): JSX.Element => {
             <img className="w-[25px] md:w-[30px] lg:w-[37px] h-1" alt="Vector" src="/vector-1.svg" />
 
             <div className="flex items-center justify-start [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[#ffff85] text-xl md:text-3xl lg:text-4xl tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
-              JEAN DUPAS
+              JEAN DUPAS & CO
             </div>
           </div>
         </div>

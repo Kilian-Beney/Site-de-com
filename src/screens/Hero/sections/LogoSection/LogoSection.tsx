@@ -9,16 +9,8 @@ export const LogoSection = (): JSX.Element => {
         x Métiers du Multimédia et de l&apos;Internet
       </div>
 
-      <div className="flex relative items-center gap-4 md:gap-8 lg:gap-[67px] flex-wrap justify-center">
-        <div className="flex items-center justify-center [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[#59c0eb] text-xl md:text-3xl lg:text-4xl text-center tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
-          EXPOSITION
-        </div>
-
-        <img className="w-[25px] md:w-[30px] lg:w-[37px] h-1" alt="Vector" src="/vector-1.svg" />
-
-        <div className="flex items-center justify-center [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[#59c0eb] text-xl md:text-3xl lg:text-4xl text-center tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
-          JEAN DUPAS
-        </div>
+      <div className="flex items-center justify-center [font-family:'Helvetica_Neue-Bold',Helvetica] font-bold text-[#59c0eb] text-base md:text-lg lg:text-xl text-center tracking-[-1px] md:tracking-[-1.5px] lg:tracking-[-2px] leading-tight">
+        JEAN DUPAS & CO - LE GRAND ART DECO
       </div>
     </section>
   );

@@ -13,9 +13,9 @@ export const ContactInfoSection = (): JSX.Element => {
   return (
     <footer className="w-full bg-[#85A798] py-8 md:py-12">
       <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 px-4 md:px-12 lg:px-[105px] max-w-full mx-auto">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center justify-start font-musba text-[#ffff85] text-5xl md:text-7xl lg:text-[100px] tracking-[-4px] md:tracking-[-7px] lg:tracking-[-9.00px] leading-tight">
-            Musba.
+        <div className="flex flex-col gap-2 w-full md:w-auto">
+          <div className="flex items-center justify-start font-musba text-[#ffff85] text-4xl sm:text-5xl md:text-7xl lg:text-[100px] tracking-[-4px] md:tracking-[-7px] lg:tracking-[-9.00px] leading-tight">
+            MusBA
           </div>
 
           <div className="flex items-center justify-start font-swiss font-normal text-[#ffff85] text-sm md:text-lg lg:text-[23px] tracking-[-1px] md:tracking-[-1.5px] lg:tracking-[-2.07px] leading-tight">
@@ -23,13 +23,13 @@ export const ContactInfoSection = (): JSX.Element => {
           </div>
 
           <div className="flex items-center gap-2 md:gap-4 mt-2 md:mt-4 flex-wrap">
-            <div className="flex items-center justify-start font-swiss text-[#ffff85] text-xl md:text-3xl lg:text-4xl tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
+            <div className="flex items-center justify-start font-swiss font-normal text-[#ffff85] text-xl md:text-3xl lg:text-4xl tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
               EXPOSITION
             </div>
 
             <img className="w-[25px] md:w-[30px] lg:w-[37px] h-1" alt="Vector" src="/vector-1.svg" />
 
-            <div className="flex items-center justify-start font-swiss text-[#ffff85] text-xl md:text-3xl lg:text-4xl tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
+            <div className="flex items-center justify-start font-swiss font-normal text-[#ffff85] text-xl md:text-3xl lg:text-4xl tracking-[-2px] md:tracking-[-2.8px] lg:tracking-[-3.24px] leading-tight whitespace-nowrap">
               JEAN DUPAS & CO - LE GRAND ART DÉCO
             </div>
           </div>

@@ -5,10 +5,10 @@ export const VideoSection = (): JSX.Element => {
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
-      <h2 className="title-bar font-musba text-black text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-4">
+      <h2 className="title-bar font-musba text-black text-2xl sm:text-3xl md:text-4xl lg:text-[48px] tracking-[-0.72px] leading-tight mb-4">
         Expérience interactive
       </h2>
-      <h3 className="font-musba text-[#85A798] text-xl md:text-2xl lg:text-3xl mb-12 md:mb-16 pl-4 border-l-4 border-[#85A798]">
+      <h3 className="font-musba text-[#85A798] text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 md:mb-16 pl-4 border-l-4 border-[#85A798]">
         Dupas : ses œuvres dans le monde entier
       </h3>
       
@@ -23,8 +23,8 @@ export const VideoSection = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="w-full lg:w-[320px] shrink-0">
-          <div className="w-full aspect-[9/16] bg-[#E5E5E5] border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center shadow-inner relative group min-h-[400px]">
+        <div className="w-full lg:w-[280px] shrink-0">
+          <div className="w-full aspect-[9/16] bg-[#E5E5E5] border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center shadow-inner relative group min-h-[350px]">
             <LazyVideo
               src={videoUrl}
               className="w-full h-full object-cover"

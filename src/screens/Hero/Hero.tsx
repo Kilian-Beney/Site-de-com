@@ -7,6 +7,7 @@ import { TeamsSection } from "./sections/TeamsSection";
 import { CollaborationSection } from "./sections/CollaborationSection";
 import { VideoSection } from "./sections/VideoSection";
 import { SocialSliderSection } from "./sections/SocialSliderSection";
+import { CommunicationSection } from "./sections/CommunicationSection";
 
 export const Hero = (): JSX.Element => {
   useEffect(() => {
@@ -46,6 +47,7 @@ export const Hero = (): JSX.Element => {
       <CollaborationSection />
       <ProductionSection />
       <SocialSliderSection />
+      <CommunicationSection />
 
       <ContactInfoSection />
     </div>

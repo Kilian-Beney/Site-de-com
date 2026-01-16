@@ -81,6 +81,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
   ];
 
   const title = "Jean Dupas";
+  const titleAlt = "Jean Dupas";
 
   const scrollIndicator = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
@@ -161,33 +162,15 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
       </div>
 
       <div className="w-full max-w-[1200px] flex flex-col items-center text-center px-4 overflow-hidden">
-        <h1 className="font-musba text-black text-[35px] sm:text-[80px] md:text-[100px] lg:text-[150px] xl:text-[180px] tracking-tighter leading-none mb-8 md:mb-12">
-          {title.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 100, rotateX: 90 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.08,
-                ease: [0.25, 0.46, 0.45, 0.94],
-                rotateX: {
-                  type: "spring",
-                  damping: 12,
-                  stiffness: 100
-                }
-              }}
-              className="inline-block origin-bottom"
-              style={{
-                display: char === " " ? "inline" : "inline-block",
-                transformStyle: "preserve-3d"
-              }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </motion.span>
-          ))}
-        </h1>
+        <motion.h1 
+          className="font-musba text-black text-[35px] sm:text-[80px] md:text-[100px] lg:text-[150px] xl:text-[180px] tracking-tight leading-none mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          {titleAlt}
+        </motion.h1>
 
         <motion.div
           className="flex flex-col gap-6 max-w-[850px]"

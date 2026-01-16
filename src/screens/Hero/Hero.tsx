@@ -3,7 +3,6 @@ import { ArtisticShowcaseSection } from "./sections/ArtisticShowcaseSection";
 import { ContactInfoSection } from "./sections/ContactInfoSection";
 import { LogoSection } from "./sections/LogoSection";
 import { ProductionSection } from "./sections/ProductionSection";
-import { ArtistBiographySection } from "./sections/ArtistBiographySection";
 import { TeamsSection } from "./sections/TeamsSection";
 import { CollaborationSection } from "./sections/CollaborationSection";
 import { VideoSection } from "./sections/VideoSection";
@@ -11,6 +10,11 @@ import { SocialSliderSection } from "./sections/SocialSliderSection";
 
 export const Hero = (): JSX.Element => {
   useEffect(() => {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("active"));
+      return;
+    }
+
     const observerOptions = {
       root: null,
       rootMargin: "0px",
@@ -36,7 +40,6 @@ export const Hero = (): JSX.Element => {
     <div className="bg-white w-full flex flex-col">
       <LogoSection />
 
-      <ArtistBiographySection />
       <ArtisticShowcaseSection />
       <VideoSection />
       <TeamsSection />

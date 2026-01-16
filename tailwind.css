@@ -110,6 +110,22 @@
   transform: translateX(0);
 }
 
+.reveal.slide-up {
+  transform: translateY(50px);
+}
+
+.reveal.slide-up.active {
+  transform: translateY(0);
+}
+
+.reveal.fade-up {
+  transform: translateY(30px);
+}
+
+.reveal.fade-up.active {
+  transform: translateY(0);
+}
+
 .title-bar {
   display: flex;
   align-items: center;
@@ -121,7 +137,7 @@
   display: block;
   width: 8px;
   height: 2em;
-  background-color: #22c55e; /* Green color */
+  background-color: #85A798; /* Correct Green color */
   flex-shrink: 0;
 }
 
@@ -159,6 +175,28 @@
 }
 
 @layer base {
+  @font-face {
+    font-family: 'MusBA';
+    src: url('/font/MusBA-Regular.woff2') format('woff2'),
+         url('/font/MusBA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SuisseIntl';
+    src: url('/font/SuisseIntl-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SuisseIntl';
+    src: url('/font/SuisseIntl-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;

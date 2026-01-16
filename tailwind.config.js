@@ -47,7 +47,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        musba: ["MusBA", "sans-serif"],
+        swiss: ["SuisseIntl", "Helvetica", "Arial", "sans-serif"],
         sans: [
+          "SuisseIntl",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",

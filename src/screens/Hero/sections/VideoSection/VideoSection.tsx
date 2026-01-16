@@ -1,7 +1,7 @@
 import { LazyVideo } from "../../../../components/LazyVideo";
 
 export const VideoSection = (): JSX.Element => {
-  const videoUrl = "/musba vidéo 1 v1.mp4";
+  const videoUrl = "/dupas.mp4";
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">

@@ -41,7 +41,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     {
       id: 1,
       src: "/BAL_1195286.webp",
-      position: "top-[3%] left-[3%]",
+      position: "top-[2%] left-[2%]",
       parallaxSpeed: -80,
       mouseInfluence: 1.8,
       isCenter: false
@@ -49,7 +49,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     {
       id: 2,
       src: "/bourse_du_travail__frederic_Deval_ville_de_Bordeaux_6.webp",
-      position: "top-[3%] right-[3%]",
+      position: "top-[2%] right-[2%]",
       parallaxSpeed: -60,
       mouseInfluence: 2.0,
       isCenter: false
@@ -57,7 +57,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     {
       id: 3,
       src: "/bourse_du_travail_Ph_F.Deval_12.webp",
-      position: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+      position: "top-1/2 left-1/2",
       parallaxSpeed: -20,
       mouseInfluence: 0.6,
       isCenter: true
@@ -65,7 +65,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     {
       id: 4,
       src: "/bourse_du_travail_Ph_F.Deval_2.webp",
-      position: "bottom-[3%] left-[3%]",
+      position: "bottom-[2%] left-[2%]",
       parallaxSpeed: -100,
       mouseInfluence: 1.6,
       isCenter: false
@@ -73,7 +73,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     {
       id: 5,
       src: "/bourse_du_travail_Ph_F.Deval_5.webp",
-      position: "bottom-[3%] right-[3%]",
+      position: "bottom-[2%] right-[2%]",
       parallaxSpeed: -70,
       mouseInfluence: 1.9,
       isCenter: false
@@ -87,7 +87,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-12 md:py-24 px-4 md:px-12 lg:px-[114px] bg-white flex flex-col items-center overflow-hidden"
+      className="relative w-full pt-4 md:pt-8 pb-12 md:pb-24 px-4 md:px-12 lg:px-[114px] bg-white flex flex-col items-center overflow-hidden"
     >
       <motion.div
         className="fixed left-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-gray-200 rounded-full overflow-hidden z-50 hidden lg:block"
@@ -101,7 +101,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
         />
       </motion.div>
 
-      <div className="relative w-full h-[600px] sm:h-[700px] md:h-[900px] lg:h-[1100px] xl:h-[1200px] mb-12 md:mb-20">
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] mb-4 md:mb-8">
         <div className="absolute inset-0">
           {artworks.map((artwork) => {
             const y = useTransform(scrollYProgress, [0, 1], [0, artwork.parallaxSpeed]);
@@ -112,13 +112,15 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
                 key={artwork.id}
                 className={`absolute ${artwork.position} ${
                   isCenterImage
-                    ? 'w-[280px] sm:w-[380px] md:w-[550px] lg:w-[700px] xl:w-[800px] h-[380px] sm:h-[520px] md:h-[750px] lg:h-[950px] xl:h-[1100px] z-20'
-                    : 'w-[200px] sm:w-[280px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[280px] sm:h-[380px] md:h-[550px] lg:h-[680px] xl:h-[750px] z-30'
+                    ? 'w-[190px] sm:w-[250px] md:w-[330px] lg:w-[440px] xl:w-[520px] h-[140px] sm:h-[180px] md:h-[240px] lg:h-[320px] xl:h-[380px] z-10'
+                    : 'w-[110px] sm:w-[150px] md:w-[200px] lg:w-[260px] xl:w-[320px] h-[80px] sm:h-[110px] md:h-[150px] lg:h-[200px] xl:h-[240px] z-20'
                 } overflow-hidden shadow-2xl`}
                 style={{
-                  x: useTransform(mouseXSpring, (val) => val * artwork.mouseInfluence),
+                  x: useTransform(mouseXSpring, (val) => 
+                    isCenterImage ? `calc(-50% + ${val * artwork.mouseInfluence}px)` : val * artwork.mouseInfluence
+                  ),
                   y: useTransform([y, mouseYSpring], ([yVal, mouseVal]: [number, number]) =>
-                    yVal + mouseVal * artwork.mouseInfluence
+                    isCenterImage ? `calc(-50% + ${yVal + mouseVal * artwork.mouseInfluence}px)` : yVal + mouseVal * artwork.mouseInfluence
                   ),
                 }}
                 initial={{ opacity: 0, scale: 0.85, rotate: isCenterImage ? 0 : (artwork.id % 2 === 0 ? 2 : -2) }}
@@ -131,7 +133,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
                   rotate: { type: "spring", damping: 15, stiffness: 100 }
                 }}
                 whileHover={{
-                  scale: isCenterImage ? 1.03 : 1.08,
+                  scale: isCenterImage ? 1.02 : 1.05,
                   zIndex: 50,
                   rotate: isCenterImage ? 0 : (artwork.id % 2 === 0 ? 3 : -3),
                   transition: {
@@ -148,7 +150,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
                   className="w-full h-full object-cover"
                   loading="lazy"
                   whileHover={{
-                    scale: 1.05,
+                    scale: 1.1,
                     transition: { duration: 0.6 }
                   }}
                 />

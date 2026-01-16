@@ -3,50 +3,51 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     { 
       id: 1, 
       src: "/BAL_1195286.JPG.webp",
-      position: "top-[5%] left-[5%]", 
-      width: "w-[180px] md:w-[280px]", 
-      height: "h-[120px] md:h-[200px]",
+      position: "top-[2%] left-[0%]", 
+      width: "w-[220px] md:w-[420px]", 
+      height: "h-[150px] md:h-[280px]",
       delay: "delay-100"
     },
     { 
       id: 2, 
       src: "/bourse_du_travail__frederic_Deval_ville_de_Bordeaux_6.webp",
-      position: "top-[10%] right-[5%]", 
-      width: "w-[200px] md:w-[320px]", 
-      height: "h-[150px] md:h-[240px]",
+      position: "top-[5%] right-[0%]", 
+      width: "w-[250px] md:w-[480px]", 
+      height: "h-[180px] md:h-[320px]",
       delay: "delay-200"
     },
     { 
       id: 3, 
       src: "/bourse_du_travail_Ph_F.Deval_2.webp",
-      position: "top-[45%] left-[2%]", 
-      width: "w-[150px] md:w-[250px]", 
-      height: "h-[110px] md:h-[180px]",
+      position: "bottom-[10%] left-[0%]", 
+      width: "w-[200px] md:w-[380px]", 
+      height: "h-[140px] md:h-[250px]",
       delay: "delay-300"
     },
     { 
       id: 4, 
       src: "/bourse_du_travail_Ph_F.Deval_5.webp",
-      position: "bottom-[15%] right-[2%]", 
-      width: "w-[180px] md:w-[300px]", 
-      height: "h-[130px] md:h-[220px]",
+      position: "bottom-[5%] right-[0%]", 
+      width: "w-[220px] md:w-[450px]", 
+      height: "h-[160px] md:h-[300px]",
       delay: "delay-400"
     },
     { 
       id: 5, 
       src: "/bourse_du_travail_Ph_F.Deval_12.webp",
-      position: "top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2", 
-      width: "w-[260px] md:w-[450px]", 
-      height: "h-[200px] md:h-[340px]", 
+      // recentrer l'œuvre n°5 en haut-centre entre les 4 œuvres du haut
+      position: "top-[4%] left-1/2 -translate-x-1/2",
+      width: "w-[240px] md:w-[420px]",
+      height: "h-[160px] md:h-[320px]",
       zIndex: "z-20",
       delay: "delay-0"
     },
   ];
 
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white flex flex-col items-center">
+    <section className="relative w-full py-12 md:py-24 px-4 md:px-12 lg:px-[114px] bg-white flex flex-col items-center">
       {/* Collage d'images */}
-      <div className="relative w-full h-[500px] md:h-[700px] mb-8 md:mb-12">
+      <div className="relative w-full h-[600px] md:h-[900px] mb-12 md:mb-20">
         <div className="absolute inset-0">
           {artworks.map((artwork) => (
             <div
@@ -71,8 +72,8 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
         </h1>
 
         <div className="reveal slide-up delay-200 flex flex-col gap-6 max-w-[850px]">
-          <p className="font-swiss font-bold text-black text-xl md:text-2xl lg:text-[28px] tracking-[-0.5px] leading-relaxed">
-            Jean Dupas (1882-1964) est peintre, dessinateur, affichiste et décorateur français. Il s’impose comme l’un des artistes les plus emblématiques de l’Art Déco.
+          <p className="font-swiss font-normal text-black text-xl md:text-2xl lg:text-[28px] tracking-[-0.5px] leading-relaxed">
+            <span className="font-bold">Jean Dupas</span> (1882-1964) est peintre, dessinateur, affichiste et décorateur français. Il s’impose comme l’un des artistes les plus emblématiques de l’<span className="font-bold">Art Déco</span>.
           </p>
 
           <p className="font-swiss font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.4px] leading-relaxed">

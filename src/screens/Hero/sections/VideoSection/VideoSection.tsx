@@ -12,26 +12,28 @@ export const VideoSection = (): JSX.Element => {
         Dupas : ses œuvres dans le monde entier
       </h3>
       
-      <div className="max-w-[900px] flex flex-col gap-6 mb-12 md:mb-16">
-        <p className="reveal slide-left font-swiss font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
-          Nous proposons une expérience interactive sur tablette qui invite le public à partir sur les traces de Jean Dupas, au-delà des murs du musée. Pensée comme un voyage, cette exploration permet de découvrir des œuvres aujourd’hui inaccessibles : fresques monumentales, décors architecturaux ou créations perdues dans l’immensité de l’océan ou intégrées à des bâtiments à travers le monde.
-        </p>
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+        <div className="flex-1 flex flex-col gap-6">
+          <p className="reveal slide-left font-swiss font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
+            Nous proposons une expérience interactive sur tablette qui invite le public à partir sur les traces de Jean Dupas, au-delà des murs du musée. Pensée comme un voyage, cette exploration permet de découvrir des œuvres aujourd’hui inaccessibles : fresques monumentales, décors architecturaux ou créations perdues dans l’immensité de l’océan ou intégrées à des bâtiments à travers le monde.
+          </p>
 
-        <p className="reveal slide-left font-swiss font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
-          Loin d’un catalogue d’œuvres traditionnel, l’expérience repose sur une navigation immersive et intuitive. À travers une carte du monde interactive, le visiteur explore les lieux marqués par Jean Dupas, découvre l’histoire de chaque œuvre, son contexte de création et son implantation géographique. L’objectif est de faire ressentir la présence de ces œuvres comme si l’on s’y trouvait, tout en révélant la dimension profondément internationale de l’artiste.
-        </p>
-      </div>
+          <p className="reveal slide-left font-swiss font-normal text-black text-lg md:text-xl lg:text-[24px] tracking-[-0.5px] leading-relaxed md:leading-[32px]">
+            Loin d’un catalogue d’œuvres traditionnel, l’expérience repose sur une navigation immersive et intuitive. À travers une carte du monde interactive, le visiteur explore les lieux marqués par Jean Dupas, découvre l’histoire de chaque œuvre, son contexte de création et son implantation géographique. L’objectif est de faire ressentir la présence de ces œuvres comme si l’on s’y trouvait, tout en révélant la dimension profondément internationale de l’artiste.
+          </p>
+        </div>
 
-      <div className="flex items-center justify-center w-full max-w-[400px] mx-auto">
-        <div className="w-full aspect-[9/16] bg-[#E5E5E5] border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center shadow-inner relative group min-h-[500px]">
-          <LazyVideo
-            src={videoUrl}
-            className="w-full h-full object-cover"
-            autoPlay={false}
-            muted={true}
-            loop={true}
-            controls={true}
-          />
+        <div className="w-full lg:w-[320px] shrink-0">
+          <div className="w-full aspect-[9/16] bg-[#E5E5E5] border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center shadow-inner relative group min-h-[400px]">
+            <LazyVideo
+              src={videoUrl}
+              className="w-full h-full object-cover"
+              autoPlay={false}
+              muted={true}
+              loop={true}
+              controls={true}
+            />
+          </div>
         </div>
       </div>
     </section>

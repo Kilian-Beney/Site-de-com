@@ -9,7 +9,7 @@ export const LogoSection = (): JSX.Element => {
         x IUT Bordeaux Montaigne x MMI Bordeaux
       </div>
 
-      <div className="flex items-center justify-center font-musba text-[#85A798] text-base md:text-lg lg:text-xl text-center tracking-[-1px] md:tracking-[-1.5px] lg:tracking-[-2px] leading-tight">
+      <div className="flex items-center justify-center font-swiss text-[#85A798] text-base md:text-lg lg:text-xl text-center tracking-[-1px] md:tracking-[-1.5px] lg:tracking-[-2px] leading-tight">
         JEAN DUPAS & CO - LE GRAND ART DÉCO
       </div>
     </section>

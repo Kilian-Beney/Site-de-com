@@ -1,5 +1,7 @@
+import { LazyVideo } from "../../../../components/LazyVideo";
+
 export const ProductionSection = (): JSX.Element => {
-  const photos = Array(6).fill(null);
+  const videoUrl = "/Réunion.mp4";
 
   return (
     <section className="w-full py-12 md:py-16 px-4 md:px-12 lg:px-[114px] bg-white">
@@ -17,17 +19,17 @@ export const ProductionSection = (): JSX.Element => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {photos.map((_, index) => (
-          <div
-            key={index}
-            className="aspect-square bg-[#E5E5E5] border border-gray-300 rounded-none flex items-center justify-center"
-          >
-            <span className="font-swiss font-normal text-gray-500 text-lg md:text-xl">
-              Photo
-            </span>
-          </div>
-        ))}
+      <div className="w-full max-w-4xl mx-auto">
+        <div className="aspect-video bg-[#E5E5E5] border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center shadow-lg relative group">
+          <LazyVideo
+            src={videoUrl}
+            className="w-full h-full object-cover"
+            autoPlay={false}
+            muted={true}
+            loop={true}
+            controls={true}
+          />
+        </div>
       </div>
     </section>
   );

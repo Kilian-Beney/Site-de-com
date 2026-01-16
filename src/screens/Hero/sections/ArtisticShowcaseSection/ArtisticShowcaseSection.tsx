@@ -80,7 +80,7 @@ export const ArtisticShowcaseSection = (): JSX.Element => {
     },
   ];
 
-  const title = "Jean Dupas";
+  const title = "Jean Dupas"  ;
   const titleAlt = "Jean Dupas";
 
   const scrollIndicator = useTransform(scrollYProgress, [0, 1], [0, 100]);
